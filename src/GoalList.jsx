@@ -15,7 +15,7 @@ function GoalList() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/goals")
+    fetch("https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals")
       .then((res) => res.json())
       .then(setGoals)
       .catch(() => alert("Failed to load goals"));
@@ -23,7 +23,7 @@ function GoalList() {
 
   
   function handleDelete(id) {
-    fetch(`http://localhost:3000/goals/${id}`, {
+    fetch(`https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals/${id}`, {
       method: "DELETE",
     })
       .then((res) => {
@@ -71,7 +71,7 @@ function GoalList() {
     }
 
     setError("");
-    fetch(`http://localhost:3000/goals/${editingGoal.id}`, {
+    fetch(`https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals/${editingGoal.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

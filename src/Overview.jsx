@@ -4,7 +4,7 @@ function Overview() {
   const [goals, setGoals] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/goals")
+    fetch("https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals")
       .then((res) => res.json())
       .then(setGoals);
   }, []);

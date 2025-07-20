@@ -7,7 +7,7 @@ function DepositForm() {
 
   
   useEffect(() => {
-    fetch("http://localhost:3000/goals")
+    fetch("https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch goals");
         return res.json();
@@ -42,7 +42,7 @@ function DepositForm() {
     const updatedAmount = goal.savedAmount + depositAmount;
 
     
-    fetch(`http://localhost:3000/goals/${selectedId}`, {
+    fetch(`https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals/${selectedId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ savedAmount: updatedAmount }),

@@ -15,7 +15,7 @@ function AddGoalForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/goals", {
+    fetch("https://my-json-server.typicode.com/Cmay-html/Goal-tracker/goals", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
