@@ -6,6 +6,7 @@ import GoalList from "./GoalList";
 import AddGoalForm from "./AddGoalForm";
 import DepositForm from "./DepositForm";
 import Overview from "./Overview";
+import './App.css';
 
 function App() {
   return (

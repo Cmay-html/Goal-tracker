@@ -14,7 +14,7 @@ function Overview() {
   const today = new Date();
 
   return (
-    <div>
+    <div className="overview-container">
       <h2>Overview</h2>
       <p>Total Goals: {goals.length}</p>
       <p>Total Saved: ${totalSaved}</p>

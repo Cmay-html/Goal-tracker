@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header>
+    <header className="Header">
       <h1> SMART GOAL PLANNER </h1>
       <nav>
         <Link to="/">Home</Link> |{" "}

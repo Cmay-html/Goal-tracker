@@ -93,17 +93,19 @@ function GoalList() {
       .catch(() => setError("Failed to update goal. Please try again."));
   }
 
-  return (
-    <div>
+  return(
+       <div>
       <h2>Your Goals</h2>
-      {goals.map((goal) => (
-        <GoalCard
-          key={goal.id}
-          goal={goal}
-          onDelete={handleDelete}
-          onEdit={handleEdit}
-        />
-      ))}
+      <ul className="goals-list">
+        {goals.map((goal) => (
+          <GoalCard
+            key={goal.id}
+            goal={goal}
+            onDelete={handleDelete}
+            onEdit={handleEdit}
+          />
+        ))}
+      </ul>
 
     
       {editingGoal && (
@@ -143,7 +145,7 @@ function GoalList() {
           />
           
           <br />
-          <button type="submit">Save Changes</button>
+          <button type="submit" className="submit-button">Save Changes</button>
           <button
             type="button"
             onClick={() => setEditingGoal(null)}
